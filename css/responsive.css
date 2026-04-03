@@ -1,6 +1,7 @@
 @media (max-width: 767px) {
-  .hero__logo {
-    max-height: min(22vh, 160px);
+  .hero__title {
+    font-size: clamp(1.75rem, 5.5vw, 4rem);
+    column-gap: 0.35em;
   }
 
   .hero__subtitle {

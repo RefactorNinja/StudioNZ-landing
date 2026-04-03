@@ -27,18 +27,85 @@
   margin-inline: auto;
 }
 
-.hero__brand {
-  margin-bottom: var(--space-md);
+.hero__title {
+  --hero-title-lh: 1.08;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(2rem, 6vw, 5.5rem);
+  line-height: var(--hero-title-lh);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin: 0 auto var(--space-md);
   animation: hero-enter 1s var(--ease-out-expo) forwards;
+  display: inline-grid;
+  grid-template-columns: auto minmax(0, max-content);
+  grid-template-rows: auto auto;
+  align-items: center;
+  column-gap: 0.42em;
+  row-gap: 0.04em;
+  text-align: left;
+  max-width: 100%;
 }
 
-.hero__logo {
-  width: min(92vw, 520px);
-  height: auto;
-  max-height: min(28vh, 200px);
-  margin-inline: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 0 24px rgba(255, 85, 0, 0.25));
+.hero__mark--rec {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.hero__title > .line:first-of-type {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.hero__mark--play {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.hero__title > .line:last-of-type {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.hero__mark {
+  width: calc(0.7 * 1em * var(--hero-title-lh));
+  height: calc(0.7 * 1em * var(--hero-title-lh));
+  min-width: 1.35rem;
+  min-height: 1.35rem;
+  display: block;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 5px rgba(255, 85, 0, 0.55));
+}
+
+.hero__mark--play {
+  filter: drop-shadow(0 0 5px rgba(0, 203, 160, 0.45));
+}
+
+.hero__title .line {
+  display: block;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.hero__title-accent {
+  color: var(--accent);
+}
+
+.hero__btn-primary {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: var(--text-xs);
+}
+
+.hero__btn-secondary {
+  border-color: var(--border-subtle);
+  color: var(--text-primary);
+}
+
+.hero__btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-subtle);
 }
 
 .hero__subtitle {
@@ -61,10 +128,3 @@
   animation-fill-mode: forwards;
 }
 
-.hero__subcta {
-  font-size: var(--text-sm);
-  color: var(--text-muted);
-  width: 100%;
-  text-align: center;
-  margin-top: var(--space-md);
-}
