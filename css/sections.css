@@ -31,25 +31,102 @@
 
 .benefit-list {
   display: grid;
-  gap: var(--space-lg);
+  gap: var(--space-md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 @media (min-width: 768px) {
   .benefit-list {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
   }
 }
 
-.benefit-item__title {
+.benefit-mini {
+  margin: 0;
+}
+
+.benefit-mini__inner {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition:
+    transform 0.55s var(--ease-out-expo),
+    border-color 0.45s var(--ease-out-expo),
+    box-shadow 0.55s var(--ease-out-expo);
+}
+
+.benefit-mini__inner::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0.35;
+  transition: opacity 0.45s var(--ease-out-expo);
+}
+
+.benefit-mini:hover .benefit-mini__inner,
+.benefit-mini:focus-within .benefit-mini__inner {
+  transform: translateY(-6px);
+  border-color: rgba(255, 85, 0, 0.45);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.35),
+    0 0 32px rgba(255, 85, 0, 0.12);
+}
+
+.benefit-mini:hover .benefit-mini__inner::before,
+.benefit-mini:focus-within .benefit-mini__inner::before {
+  opacity: 1;
+}
+
+.benefit-mini__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  transition:
+    transform 0.5s var(--ease-out-expo),
+    border-color 0.45s ease,
+    box-shadow 0.5s ease;
+}
+
+.benefit-mini:hover .benefit-mini__icon,
+.benefit-mini:focus-within .benefit-mini__icon {
+  transform: scale(1.06);
+  border-color: rgba(255, 85, 0, 0.25);
+  box-shadow: 0 0 20px rgba(255, 85, 0, 0.15);
+}
+
+.benefit-mini__title {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: var(--text-lg);
-  margin-bottom: var(--space-xs);
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin: 0;
 }
 
-.benefit-item__text {
+.benefit-mini__text {
   color: var(--text-secondary);
   font-size: var(--text-sm);
+  line-height: 1.55;
+  margin: 0;
 }
 
 .about__grid {

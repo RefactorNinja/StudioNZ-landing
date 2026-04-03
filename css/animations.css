@@ -39,6 +39,22 @@ html.reveal-js .reveal.visible {
   transform: translateY(0);
 }
 
+/* Доп. «оживление» мини-блоков «Что унесёшь» при появлении */
+@keyframes benefit-inner-in {
+  from {
+    opacity: 0.85;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+html.reveal-js .benefit-mini.reveal.visible .benefit-mini__inner {
+  animation: benefit-inner-in 0.65s var(--ease-out-expo) both;
+}
+
 .glow-text {
   text-shadow:
     0 0 30px rgba(255, 85, 0, 0.4),

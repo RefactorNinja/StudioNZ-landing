@@ -30,4 +30,11 @@
     opacity: 1 !important;
     transform: none !important;
   }
+
+  .benefit-mini:hover .benefit-mini__inner,
+  .benefit-mini:focus-within .benefit-mini__inner,
+  .benefit-mini:hover .benefit-mini__icon,
+  .benefit-mini:focus-within .benefit-mini__icon {
+    transform: none !important;
+  }
 }
