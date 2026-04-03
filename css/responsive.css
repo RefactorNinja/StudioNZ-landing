@@ -25,8 +25,9 @@
     scroll-behavior: auto;
   }
 
-  .reveal {
-    opacity: 1;
-    transform: none;
+  .reveal,
+  html.reveal-js .reveal:not(.visible) {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

@@ -19,15 +19,22 @@
   }
 }
 
+/* По умолчанию видимо: работает при file:// и без JS */
 .reveal {
-  opacity: 0;
-  transform: translateY(30px);
+  opacity: 1;
+  transform: translateY(0);
   transition:
     opacity 0.7s ease,
     transform 0.7s ease;
 }
 
-.reveal.visible {
+/* Скрытие только после успешной инициализации скрипта (см. scroll-animations.js) */
+html.reveal-js .reveal:not(.visible) {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+html.reveal-js .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
