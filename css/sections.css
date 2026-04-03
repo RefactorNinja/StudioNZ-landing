@@ -1,0 +1,135 @@
+.section {
+  padding-block: var(--section-padding);
+}
+
+.section--alt {
+  background: var(--bg-secondary);
+}
+
+.section__intro {
+  max-width: 42rem;
+  margin-bottom: var(--space-xl);
+}
+
+.section__intro p {
+  color: var(--text-secondary);
+  margin-top: var(--space-sm);
+}
+
+.separator {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--separator) 20%,
+    var(--accent) 50%,
+    var(--separator) 80%,
+    transparent
+  );
+  margin-block: var(--space-xl);
+}
+
+.benefit-list {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .benefit-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.benefit-item__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.benefit-item__text {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+.about__grid {
+  display: grid;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+}
+
+.about__gallery img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+}
+
+.about__text {
+  color: var(--text-secondary);
+  font-size: var(--text-base);
+}
+
+.about__text p + p {
+  margin-top: var(--space-md);
+}
+
+.services-grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 900px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.site-footer {
+  padding-block: var(--space-2xl);
+  padding-inline: var(--container-pad);
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.site-footer__inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  display: grid;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .site-footer__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.site-footer a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.site-footer a:hover {
+  color: var(--text-primary);
+}
+
+.site-footer__meta {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  margin-top: var(--space-xl);
+  grid-column: 1 / -1;
+}

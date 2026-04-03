@@ -1,0 +1,70 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--section-padding) var(--container-pad);
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 20%, var(--accent-subtle), transparent 55%),
+    var(--bg-primary);
+  will-change: transform;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 56rem;
+  margin-inline: auto;
+}
+
+.hero__brand {
+  margin-bottom: var(--space-md);
+  animation: hero-enter 1s var(--ease-out-expo) forwards;
+}
+
+.hero__logo {
+  width: min(92vw, 520px);
+  height: auto;
+  max-height: min(28vh, 200px);
+  margin-inline: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 24px rgba(255, 85, 0, 0.25));
+}
+
+.hero__subtitle {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xl);
+  animation: hero-enter 1s var(--ease-out-expo) 0.1s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  justify-content: center;
+  align-items: center;
+  animation: hero-enter 1s var(--ease-out-expo) 0.2s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.hero__subcta {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  width: 100%;
+  text-align: center;
+  margin-top: var(--space-md);
+}

@@ -1,0 +1,32 @@
+@media (max-width: 767px) {
+  .hero__logo {
+    max-height: min(22vh, 160px);
+  }
+
+  .hero__subtitle {
+    font-size: var(--text-base);
+  }
+
+  .about__gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

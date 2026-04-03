@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap');
+
+:root {
+  --bg-primary: #0a0705;
+  --bg-secondary: #110e0a;
+  --bg-card: #1a1510;
+  --bg-elevated: #221c15;
+
+  --accent: #ff5500;
+  --accent-dim: #cc4400;
+  --accent-glow: rgba(255, 85, 0, 0.3);
+  --accent-subtle: rgba(255, 85, 0, 0.08);
+
+  --text-primary: #f5ede0;
+  --text-secondary: #a08060;
+  --text-muted: #5a4535;
+
+  --border: rgba(255, 85, 0, 0.15);
+  --border-subtle: rgba(240, 200, 150, 0.08);
+  --separator: rgba(255, 85, 0, 0.2);
+
+  --font-display: 'Unbounded', system-ui, sans-serif;
+  --font-body: 'Golos Text', system-ui, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.75rem;
+  --text-hero: clamp(3rem, 8vw, 7rem);
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+
+  --section-padding: clamp(4rem, 8vw, 8rem);
+  --container-max: 1200px;
+  --container-pad: clamp(1rem, 4vw, 3rem);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-base: 0.6s;
+}
