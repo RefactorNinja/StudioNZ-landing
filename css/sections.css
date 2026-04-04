@@ -250,10 +250,7 @@
 }
 
 .site-footer__row {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  column-gap: 0.65rem;
+  display: block;
   width: 100%;
   max-width: 100%;
   font-size: var(--text-sm);
@@ -262,7 +259,18 @@
   transition: color 0.2s ease;
 }
 
-.site-footer__row > span {
+/* Flex на span внутри <a>: стабильнее, чем grid/flex на самой ссылке (WebKit на телефонах) */
+.site-footer__line {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.65rem;
+  width: 100%;
+}
+
+.site-footer__text {
+  flex: 1 1 auto;
   min-width: 0;
   word-break: break-word;
 }
@@ -272,6 +280,7 @@
 }
 
 .site-footer__icon {
+  flex-shrink: 0;
   width: 18px;
   height: 18px;
   min-width: 18px;
