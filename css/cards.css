@@ -150,6 +150,41 @@
   font-weight: 700;
 }
 
+.service-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.service-steps li {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  column-gap: var(--space-sm);
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+.service-steps__num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  line-height: 1.3;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.service-steps__desc {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--text-2);
+}
+
 .btn--service-cta {
   width: 100%;
   margin-top: auto;
