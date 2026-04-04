@@ -13,8 +13,8 @@
   }
 }
 
-/* Футер: мобильная и планшетная вёрстка (сетка 1 колонка до 899px в sections.css) */
-@media (max-width: 899px) {
+/* Футер: только узкие экраны; с 768px — три колонки как на десктопе */
+@media (max-width: 767px) {
   .site-footer {
     padding-block: var(--space-xl);
   }
@@ -23,8 +23,12 @@
     gap: var(--space-lg);
   }
 
-  .site-footer__logo-link {
+  .site-footer__logo-wrap {
     max-width: min(260px, 88vw);
+  }
+
+  .site-footer__logo-link {
+    max-width: 100%;
   }
 
   .site-footer__logo {
