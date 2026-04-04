@@ -44,6 +44,21 @@
     gap: var(--space-sm);
   }
 
+  /* Иконка + текст в одной строке (grid надёжнее flex у ссылок на мобильных) */
+  .site-footer__row {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 0.65rem;
+  }
+
+  .site-footer__row .site-footer__icon {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    max-width: 18px;
+  }
+
   .site-footer__rule {
     margin-block: var(--space-lg);
   }
