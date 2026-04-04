@@ -18,6 +18,10 @@ Desktop.ini
 .vscode/*
 !.vscode/extensions.json
 
+# Python cache
+__pycache__/
+*.pyc
+
 # Env (if added later)
 .env
 .env.*
