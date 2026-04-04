@@ -8,6 +8,16 @@
     font-size: var(--text-base);
   }
 
+  .hero__nav {
+    gap: 0.65rem 1rem;
+    font-size: var(--text-xs);
+    padding: 0.65rem var(--container-pad);
+  }
+
+  .hero__nav-cta {
+    padding: 0.45rem 1rem;
+  }
+
   .about__gallery {
     grid-template-columns: 1fr;
   }
